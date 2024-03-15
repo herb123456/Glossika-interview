@@ -1,0 +1,11 @@
+app:
+  name: "myapp"
+  port: 8080
+  debug: true
+
+db:
+  host: "localhost"
+  port: 33066
+  username: "root"
+  password: "123456"
+  dbname: "glossika"
