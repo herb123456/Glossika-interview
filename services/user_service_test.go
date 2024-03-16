@@ -40,7 +40,6 @@ func TestVerifyUserEmail(t *testing.T) {
 	userService := UserService{DB: gormDB}
 	resultUser, err := userService.VerifyEmail("aa@aa.com", "1234")
 
-	// 验证
 	assert.NoError(t, err)
 	assert.NotNil(t, resultUser)
 	assert.True(t, resultUser.Verified)

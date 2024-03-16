@@ -10,5 +10,11 @@ db:
   password: "123456"
   dbname: "glossika"
 
+redis:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+
 jwt:
   secret: "mysecret"

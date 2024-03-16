@@ -68,7 +68,3 @@ func (us *UserService) GenerateToken(u *models.User) (string, error) {
 
 	return tokenString, nil
 }
-
-func GetUserTokenClaim() {
-
-}
