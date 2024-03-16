@@ -227,7 +227,7 @@ curl -X POST "http://localhost:8080/login" -H "accept: application/json" -H "Con
 
 取得推薦商品資料的API endpoint為`/recommendation`，使用GET method。
 
-因題目限制的300秒查詢時間，所以就不針對資料庫查詢做優化，直接假設查詢就是需要300秒（time.Sleep）
+因題目限制300秒查詢時間，所以就不針對資料庫查詢做優化，直接假設查詢就是需要300秒（time.Sleep）
 
 所以這隻API設計成非同步模式
 
