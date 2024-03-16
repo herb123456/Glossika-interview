@@ -10,7 +10,18 @@ type ValidationError struct {
 }
 
 func NewValidationError(e error) *ValidationError {
-	errs := e.(validator.ValidationErrors)
+	errs, ok := e.(validator.ValidationErrors)
+	if !ok {
+		return &ValidationError{
+			AppError: AppError{
+				Code:         400,
+				ErrorCode:    "validation_error",
+				Message:      "Validation error",
+				DebugMessage: e.Error(),
+			},
+		}
+	}
+
 	out := make([]string, len(errs))
 	for _, e := range errs {
 		out = append(out, e.Field()+":"+customValidatorErrorMsg(e))

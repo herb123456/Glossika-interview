@@ -70,7 +70,7 @@ func (u UsersController) Register(c *gin.Context) {
 	}
 
 	// send a verification email
-	go services.SendEmail(user.Email, "Verification Code", "Your verification code is "+verificationCode)
+	go services.EmailService{}.SendEmail(user.Email, "Verification Code", "Your verification code is "+verificationCode)
 
 	response.Success(c, user)
 }

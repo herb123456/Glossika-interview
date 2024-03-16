@@ -1,6 +1,7 @@
 package myerror
 
 const TYPE_USER_EXIST = "user_exist"
+const TYPE_EMAIL_CODE_WRONG = "email_code_wrong"
 
 type UserError struct {
 	AppError
@@ -21,6 +22,8 @@ func getErrorMsg(errtype string) string {
 	switch errtype {
 	case TYPE_USER_EXIST:
 		return "User already exists"
+	case TYPE_EMAIL_CODE_WRONG:
+		return "Email verification code is wrong"
 	default:
 		return "Unknown error"
 	}
