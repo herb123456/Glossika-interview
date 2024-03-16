@@ -17,5 +17,8 @@ FROM scratch
 # 複製從第一階段建構的執行檔
 COPY --from=builder /app/main .
 
+# 複製設定
+COPY --from=builder /app/config /config
+
 # 執行Go程式
 CMD ["./main"]
