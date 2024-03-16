@@ -9,3 +9,6 @@ db:
   username: "root"
   password: "123456"
   dbname: "glossika"
+
+jwt:
+  secret: "mysecret"
